@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include karan *.css
+recursive-include karan *.csv
+recursive-include karan *.html
+recursive-include karan *.ico
+recursive-include karan *.js
+recursive-include karan *.json
+recursive-include karan *.md
+recursive-include karan *.png
+recursive-include karan *.py
+recursive-include karan *.svg
+recursive-include karan *.txt
+recursive-exclude karan *.pyc
