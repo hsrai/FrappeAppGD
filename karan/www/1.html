@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% set intro = """<p>
+ May be multi line introduction / text /
+ or something else</p>""" %}
+{% set title = _("About Us Title of page") %}
+
+{% block page_content %}
+
+<article class="about-content">
+	{{ web_block(
+		'Hero',
+		values={
+			"title": title,
+			"subtitle": intro
+		},
+		add_container=0,
+		add_top_padding=0,
+		add_bottom_padding=0,
+	)}}
+	<section class="section section-padding-bottom">
+		{{ "Footer by HSRai @ GD" }}
+	</section>
+</article>
+{% endblock %}

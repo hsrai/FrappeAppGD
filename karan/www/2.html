@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+
+{% set numberA = "5" | int %}
+{% set numberB = "3" | int %}
+
+{% block page_content %}
+
+<article class="about-content">
+<p>
+Number A = {{ numberA }} </p><p>
+Number B = {{ numberB }} </p><p>
+C = A + B = {{ numberA }} + {{ numberB }} =  {{ numberA + numberB }} </p><p>
+D = B^A = {{ numberB }}^{{ numberA }} = {{ numberB ** numberA }} </p><p>
+</p>
+<p>
+E = A^B = {{ numberA }}^{{ numberB }} = {{ numberA ** numberB }} </p><p>
+</p>
+</article>
+{% endblock %}
