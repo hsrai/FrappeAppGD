@@ -1,19 +1,29 @@
 {% extends "templates/web.html" %}
 
-{% set numberA = "5" | int %}
-{% set numberB = "3" | int %}
+{# This is
+comment, in multiple lines #}
+{# % set numberA = "5" | int % #}
+{# % set numberB = "3" | int % #}
 
 {% block page_content %}
 
 <article class="about-content">
+
+Strings:
+
 <p>
 Number A = {{ numberA }} </p><p>
 Number B = {{ numberB }} </p><p>
 C = A + B = {{ numberA }} + {{ numberB }} =  {{ numberA + numberB }} </p><p>
-D = B^A = {{ numberB }}^{{ numberA }} = {{ numberB ** numberA }} </p><p>
+
+Integers <br>
+
+C = A + B = {{ numberA }} + {{ numberB }} =  {{ numberA | int + numberB | int}} </p><p>
+D = B^A = {{ numberB }}^{{ numberA }} = {{ numberB | int ** numberA | int}} </p><p>
 </p>
 <p>
-E = A^B = {{ numberA }}^{{ numberB }} = {{ numberA ** numberB }} </p><p>
+E = A^B = {{ numberA }}^{{ numberB }} = {{ numberA | int ** numberB | int }} </p><p>
+
 </p>
 </article>
 {% endblock %}
